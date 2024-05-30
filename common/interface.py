@@ -1,12 +1,10 @@
 import tkinter as tk
 from tkinter import ttk
 from ctypes import windll
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 import equation
 import built_in_integration
 import my_integration
-import plotting
 
 windll.shcore.SetProcessDpiAwareness(1)
 
@@ -17,7 +15,7 @@ root.resizable(False, False)
 
 # Задание темы
 root.tk.call("source", "common/azure.tcl")
-root.tk.call("set_theme", "dark")
+root.tk.call("set_theme", "light")
 
 root.columnconfigure(index=0, weight=2)
 root.columnconfigure(index=1, weight=1)
