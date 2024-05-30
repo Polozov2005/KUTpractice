@@ -46,68 +46,69 @@ answer_frame.grid(
 for index in range(2):
     answer_frame.rowconfigure(index=index, weight=1)
 
-def y(x):
-    return 0 * x
-fig = plotting.plotting(y, 0, 0)
-graph_canvas = FigureCanvasTkAgg(fig, master = graph_frame)
-graph_canvas.draw()
-graph_canvas.get_tk_widget().grid(row = 0, column = 0)
+graph_image = tk.PhotoImage(file='gfx/graph.png')
+graph_label = ttk.Label(graph_frame, image=graph_image)
+graph_label.grid(row=0, column=0)
 
-equation_u_frame = ttk.Frame(conditions_frame)
-equation_u_frame.grid(
+equation_resistance_frame = ttk.Frame(conditions_frame)
+equation_resistance_frame.grid(
     row=0, column=0, padx=10, pady=(20, 10), sticky="nsew"
 )
-equation_u_image = tk.PhotoImage(file='gfx/u.png')
-equation_u_label = ttk.Label(equation_u_frame, image=equation_u_image)
-equation_u_label.grid(
+equation_resistance_image = tk.PhotoImage(file='gfx/resistance.png')
+equation_resistance_label = ttk.Label(equation_resistance_frame, image=equation_resistance_image)
+equation_resistance_label.grid(
     row=0, column=0, sticky='nsew'
 )
 
-equation_U_frame = ttk.Frame(conditions_frame)
-equation_U_frame.grid(
+equation_y_frame = ttk.Frame(conditions_frame)
+equation_y_frame.grid(
     row=1, column=0, padx=10, pady=(20, 10), sticky='nsew'
 )
-equation_U_image = tk.PhotoImage(file='gfx/u_sqrt.png')
-equation_U_label = ttk.Label(equation_U_frame, image=equation_U_image)
-equation_U_label.grid(
+equation_y_image = tk.PhotoImage(file='gfx/y.png')
+equation_y_label = ttk.Label(equation_y_frame, image=equation_y_image)
+equation_y_label.grid(
     row=0, column=0, sticky='nsew'
 )
 
-f_frame = ttk.Frame(conditions_frame)
-f_frame.grid(
+l_frame = ttk.Frame(conditions_frame)
+l_frame.grid(
     row=2, column=0, padx=10, pady=(20, 10), sticky='nsew'
 )
-f_label = ttk.Label(f_frame, text="f = ")
-f_label.grid(
+l_label = ttk.Label(l_frame, text="l = ")
+l_label.grid(
     row=0, column=0, sticky='nsew'
 )
-f_var = tk.DoubleVar(value=50)
-f_entry = ttk.Entry(f_frame, textvariable=f_var)
-f_entry.grid(
+l_var = tk.DoubleVar(value=100)
+l_entry = ttk.Entry(l_frame, textvariable=l_var)
+l_entry.grid(
     row=0, column=1, sticky='nsew'
 )
-f_unit_label = ttk.Label(f_frame, text="Гц")
-f_unit_label.grid(
+l_unit_label = ttk.Label(l_frame, text="м")
+l_unit_label.grid(
     row=0, column=2, sticky='nsew'
 )
 
-U_frame = ttk.Frame(conditions_frame)
-U_frame.grid(
+resist_optionmenu_frame = ttk.Frame(conditions_frame)
+resist_optionmenu_frame.grid(
     row=3, column=0, padx=10, pady=(20, 10), sticky='nsew'
 )
-U_label = ttk.Label(U_frame, text="U = ")
-U_label.grid(
+resist_optionmenu_dictionary = {
+    "Серебрo, 0.015 Ом*мм^2/м" : 0.015,
+    "Серебро, 0.015 Ом*мм^2/м" : 0.015,
+    "Медь, 0.018 Ом*мм^2/м" : 0.018,
+    "Золото, 0.023 Ом*мм^2/м" : 0.023,
+    "Алюминий, 0.028 Ом*мм^2/м" : 0.028
+}
+resist_optionmenu_var = tk.StringVar(resist_optionmenu_frame)
+resist_optionmenu_var.set("Серебро, 0.015 Ом*мм^2/м")
+resist_optionmenu = ttk.OptionMenu(
+    resist_optionmenu_frame, resist_optionmenu_var, *resist_optionmenu_dictionary.keys()
+)
+resist_optionmenu.config(width = 33)
+resist_optionmenu.grid(
     row=0, column=0, sticky='nsew'
 )
-U_var = tk.DoubleVar(value=220)
-U_entry = ttk.Entry(U_frame, textvariable=U_var)
-U_entry.grid(
-    row=0, column=1, sticky='nsew'
-)
-U_unit_label = ttk.Label(U_frame, text="В")
-U_unit_label.grid(
-    row=0, column=2, sticky='nsew'
-)
+
 
 optionmenu_frame = ttk.Frame(conditions_frame)
 optionmenu_frame.grid(
@@ -124,30 +125,22 @@ optionmenu.grid(
 )
 
 def solve_command():
-    f = f_entry.get()
-    U = U_entry.get()
+    length = l_entry.get()
+    rho = resist_optionmenu_dictionary[resist_optionmenu_var.get()]
 
     if optionmenu_var.get() == "Решение встроенной функцией":
-        alpha = built_in_integration.alpha(f)
+        area = built_in_integration.area()
 
     if optionmenu_var.get() == "Решение реализованной функцией":
-        alpha = my_integration.alpha(f)
+        area = my_integration.area()
 
-    T = equation.T(f)
+    resistance = equation.resistance(rho, area, length)
 
-    U_0 = equation.U_0(alpha, U)
+    area = round(area, 3)
+    area_var.set(area)
 
-    y = lambda x: equation.u(x, f, U_0)
-    fig = plotting.plotting(y, 0, T)
-    graph_canvas = FigureCanvasTkAgg(fig, master = graph_frame)
-    graph_canvas.draw()
-    graph_canvas.get_tk_widget().grid(row = 0, column = 0)
-
-    T = round(T, 3)
-    T_var.set(T)
-
-    U_0 = round(U_0, 3)
-    U_0_var.set(U_0)
+    resistance = round(resistance, 3)
+    resistance_var.set(resistance)
 
 solve_button = ttk.Button(
     solve_frame, text="Решить", style="Accent.TButton", command=solve_command
@@ -155,39 +148,39 @@ solve_button = ttk.Button(
 solve_button.config(width=30)
 solve_button.grid(row=0, column=0, padx=(250, 0), sticky="nsew")
 
-T_frame = ttk.Frame(answer_frame)
-T_frame.grid(
+area_frame = ttk.Frame(answer_frame)
+area_frame.grid(
     row=0, column=0, padx=10, pady=(20, 10), sticky='nsew'
 )
-T_label = ttk.Label(T_frame, text="T = ")
-T_label.grid(
+area_label = ttk.Label(area_frame, text="S = ")
+area_label.grid(
     row=0, column=0, sticky='nsew'
 )
-T_var = tk.DoubleVar(value=0)
-T_entry = ttk.Entry(T_frame, state="readonly", textvariable=T_var)
-T_entry.grid(
+area_var = tk.DoubleVar(value=0)
+area_entry = ttk.Entry(area_frame, state="readonly", textvariable=area_var)
+area_entry.grid(
     row=0, column=1, sticky='nsew'
 )
-T_unit_label = ttk.Label(T_frame, text="с")
-T_unit_label.grid(
+area_unit_label = ttk.Label(area_frame, text="см^2")
+area_unit_label.grid(
     row=0, column=2, sticky='nsew'
 )
 
-U_0_frame = ttk.Frame(answer_frame)
-U_0_frame.grid(
+resistance_frame = ttk.Frame(answer_frame)
+resistance_frame.grid(
     row=1, column=0, padx=10, pady=(20, 10), sticky='nsew'
 )
-U_0_label = ttk.Label(U_0_frame, text="U_0 = ")
-U_0_label.grid(
+resistance_label = ttk.Label(resistance_frame, text="R = ")
+resistance_label.grid(
     row=0, column=0, sticky='nsew'
 )
-U_0_var = tk.DoubleVar(value=0)
-U_0_entry = ttk.Entry(U_0_frame, state="readonly", textvariable=U_0_var)
-U_0_entry.grid(
+resistance_var = tk.DoubleVar(value=0)
+resistance_entry = ttk.Entry(resistance_frame, state="readonly", textvariable=resistance_var)
+resistance_entry.grid(
     row=0, column=1, sticky='nsew'
 )
-U_0_unit_label = ttk.Label(U_0_frame, text="В")
-U_0_unit_label.grid(
+resistance_unit_label = ttk.Label(resistance_frame, text="Ом")
+resistance_unit_label.grid(
     row=0, column=2, sticky='nsew'
 )
 

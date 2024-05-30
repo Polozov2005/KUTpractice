@@ -22,6 +22,6 @@ def resistance(rho, area, length):
     area = float(area)
     length = float(length)
 
-    result = rho * area * length
+    result = rho * length / (area*np.power(10.0, 2))
 
     return result
