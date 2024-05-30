@@ -17,5 +17,3 @@ def area():
     result = 4 * integral[0]
 
     return result
-
-print(area())

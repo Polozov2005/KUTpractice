@@ -18,14 +18,14 @@
         font-family: TimesNewRomanPSMT, 'Times New Roman';
       }
 
-      .cls-5, .cls-6 {
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-6, .cls-7 {
         fill: none;
         stroke: #000;
         stroke-miterlimit: 10;
-      }
-
-      .cls-7 {
-        letter-spacing: -.02em;
       }
 
       .cls-8 {
@@ -33,7 +33,7 @@
       }
 
       .cls-9 {
-        letter-spacing: -.05em;
+        letter-spacing: -.02em;
       }
 
       .cls-10 {
@@ -60,71 +60,104 @@
         font-size: 36px;
       }
 
-      .cls-6 {
+      .cls-7 {
         stroke-dasharray: 0 0 12.57 12.57;
       }
     </style>
   </defs>
   <g>
-    <rect class="cls-5" x="700" y="100" width="200" height="100" rx="46.91" ry="46.91"/>
-    <text class="cls-4" transform="translate(744.55 162.51)"><tspan x="0" y="0">Н</tspan><tspan class="cls-11" x="26" y="0">а</tspan><tspan x="40.54" y="0">ч</tspan><tspan class="cls-2" x="58.64" y="0">а</tspan><tspan x="74.94" y="0">ло</tspan></text>
+    <rect class="cls-6" x="500" y="50" width="200" height="100" rx="46.91" ry="46.91"/>
+    <text class="cls-4" transform="translate(544.55 112.51)"><tspan x="0" y="0">Н</tspan><tspan class="cls-11" x="26" y="0">а</tspan><tspan x="40.54" y="0">ч</tspan><tspan class="cls-2" x="58.64" y="0">а</tspan><tspan x="74.94" y="0">ло</tspan></text>
   </g>
   <g>
-    <rect class="cls-5" x="700" y="300" width="200" height="100"/>
-    <text class="cls-4" transform="translate(740.35 340.91)"><tspan x="0" y="0">Импо</tspan><tspan class="cls-10" x="86.04" y="0">р</tspan><tspan x="103.57" y="0">т </tspan><tspan x="-4.19" y="43.2">м</tspan><tspan class="cls-14" x="18.59" y="43.2">о</tspan><tspan x="35.55" y="43.2">д</tspan><tspan class="cls-12" x="53.87" y="43.2">у</tspan><tspan x="70.29" y="43.2">лей</tspan></text>
+    <rect class="cls-6" x="500" y="200" width="200" height="100"/>
+    <text class="cls-4" transform="translate(540.35 240.91)"><tspan x="0" y="0">Импо</tspan><tspan class="cls-10" x="86.04" y="0">р</tspan><tspan x="103.57" y="0">т </tspan><tspan x="-4.19" y="43.2">м</tspan><tspan class="cls-14" x="18.59" y="43.2">о</tspan><tspan x="35.55" y="43.2">д</tspan><tspan class="cls-12" x="53.87" y="43.2">у</tspan><tspan x="70.29" y="43.2">лей</tspan></text>
   </g>
   <g>
-    <path class="cls-5" d="m1030,300h-30v100h30"/>
-    <text class="cls-4" transform="translate(1010 340.91)"><tspan x="0" y="0">numpy</tspan><tspan x="0" y="43.2">scipy</tspan></text>
+    <path class="cls-6" d="m830,200h-30v100h30"/>
+    <text class="cls-3" transform="translate(810 230.84)"><tspan x="0" y="0">numpy</tspan><tspan x="0" y="27">scipy</tspan><tspan x="0" y="55">equation</tspan></text>
   </g>
   <g>
-    <line class="cls-5" x1="900" y1="350" x2="906" y2="350"/>
-    <line class="cls-6" x1="918.57" y1="350" x2="987.71" y2="350"/>
-    <line class="cls-5" x1="994" y1="350" x2="1000" y2="350"/>
-  </g>
-  <line class="cls-5" x1="800" y1="200" x2="800" y2="300"/>
-  <g>
-    <rect class="cls-5" x="700" y="500" width="200" height="100"/>
-    <text class="cls-3" transform="translate(738.81 543.94)"><tspan x="0" y="0">О</tspan><tspan class="cls-8" x="17.33" y="0">б</tspan><tspan x="28.95" y="0">ъя</tspan><tspan class="cls-10" x="52.39" y="0">в</tspan><tspan x="63.41" y="0">ление </tspan><tspan class="cls-8" x="-24.78" y="28.8">ф</tspan><tspan x="-9.83" y="28.8">ункции alpha(f)</tspan></text>
-  </g>
-  <line class="cls-5" x1="800" y1="400" x2="800" y2="500"/>
-  <polyline class="cls-5" points="1000 700 1000 650 800 650 800 600"/>
-  <g>
-    <rect class="cls-5" x="900" y="700" width="200" height="100"/>
-    <text class="cls-3" transform="translate(938.81 743.94)"><tspan x="0" y="0">О</tspan><tspan class="cls-8" x="17.33" y="0">б</tspan><tspan x="28.95" y="0">ъя</tspan><tspan class="cls-10" x="52.39" y="0">в</tspan><tspan x="63.41" y="0">ление </tspan><tspan class="cls-9" x="-1.28" y="28.8">к</tspan><tspan x="9.16" y="28.8">онс</tspan><tspan class="cls-1" x="44.65" y="28.8">т</tspan><tspan x="55.44" y="28.8">анты π</tspan></text>
+    <line class="cls-6" x1="700" y1="250" x2="706" y2="250"/>
+    <line class="cls-7" x1="718.57" y1="250" x2="787.71" y2="250"/>
+    <line class="cls-6" x1="794" y1="250" x2="800" y2="250"/>
   </g>
   <g>
-    <path class="cls-5" d="m1230,700h-30v100h30"/>
-    <text class="cls-3" transform="translate(1210 743.94)"><tspan x="0" y="0">Значение из </tspan><tspan x="0" y="28.8">модуля numpy</tspan></text>
+    <rect class="cls-6" x="500" y="350" width="200" height="100"/>
+    <text class="cls-3" transform="translate(538.81 393.94)"><tspan x="0" y="0">О</tspan><tspan class="cls-9" x="17.33" y="0">б</tspan><tspan x="28.95" y="0">ъя</tspan><tspan class="cls-10" x="52.39" y="0">в</tspan><tspan x="63.41" y="0">ление </tspan><tspan class="cls-9" x="-14.77" y="28.8">ф</tspan><tspan x=".18" y="28.8">ункции area()</tspan></text>
+  </g>
+  <polyline class="cls-6" points="800 550 800 500 600 500 600 450"/>
+  <g>
+    <rect class="cls-6" x="700" y="550" width="200" height="100"/>
+    <text class="cls-3" transform="translate(738.81 593.94)"><tspan x="0" y="0">О</tspan><tspan class="cls-9" x="17.33" y="0">б</tspan><tspan x="28.95" y="0">ъя</tspan><tspan class="cls-10" x="52.39" y="0">в</tspan><tspan x="63.41" y="0">ление </tspan><tspan x="-1.71" y="28.8">переменных</tspan></text>
   </g>
   <g>
-    <line class="cls-5" x1="1100" y1="750" x2="1106" y2="750"/>
-    <line class="cls-6" x1="1118.57" y1="750" x2="1187.71" y2="750"/>
-    <line class="cls-5" x1="1194" y1="750" x2="1200" y2="750"/>
+    <path class="cls-6" d="m1030,550h-30v100h30"/>
+    <text class="cls-3" transform="translate(1010 580.34)"><tspan x="0" y="0">h = 0.0001</tspan><tspan x="0" y="28">x = 0</tspan><tspan x="0" y="56">x_0 = x</tspan></text>
   </g>
   <g>
-    <rect class="cls-5" x="900" y="900" width="200" height="100"/>
-    <text class="cls-3" transform="translate(959.06 929.54)"><tspan x="0" y="0">Задание </tspan><tspan x="-48.96" y="28.8">п</tspan><tspan class="cls-14" x="-36.11" y="28.8">о</tspan><tspan x="-24.8" y="28.8">дынтегр</tspan><tspan class="cls-2" x="59.36" y="28.8">а</tspan><tspan x="70.22" y="28.8">льной </tspan><tspan class="cls-8" x="-4.05" y="57.6">ф</tspan><tspan x="10.9" y="57.6">ункции</tspan></text>
-  </g>
-  <line class="cls-5" x1="1000" y1="800" x2="1000" y2="900"/>
-  <g>
-    <rect class="cls-5" x="900" y="1100" width="200" height="100"/>
-    <text class="cls-3" transform="translate(944.82 1129.54)"><tspan x="0" y="0">Численн</tspan><tspan class="cls-1" x="87.41" y="0">о</tspan><tspan x="99.7" y="0">е </tspan><tspan x="-26.58" y="28.8">интегриро</tspan><tspan class="cls-10" x="78.93" y="28.8">в</tspan><tspan x="89.95" y="28.8">ание </tspan><tspan x="-36.45" y="57.6">при п</tspan><tspan class="cls-7" x="20.09" y="57.6">о</tspan><tspan x="31.63" y="57.6">мощи scipy</tspan></text>
-  </g>
-  <line class="cls-5" x1="1000" y1="1000" x2="1000" y2="1100"/>
-  <g>
-    <rect class="cls-5" x="900" y="1300" width="200" height="100"/>
-    <text class="cls-3" transform="translate(936.67 1343.94)"><tspan x="0" y="0">Вычисление </tspan><tspan x="-30.39" y="28.8">зн</tspan><tspan class="cls-11" x="-8.07" y="28.8">а</tspan><tspan x="1.62" y="28.8">чения </tspan><tspan class="cls-8" x="67.07" y="28.8">ф</tspan><tspan x="82.03" y="28.8">ункции</tspan></text>
+    <line class="cls-6" x1="900" y1="600" x2="906" y2="600"/>
+    <line class="cls-7" x1="918.57" y1="600" x2="987.71" y2="600"/>
+    <line class="cls-6" x1="994" y1="600" x2="1000" y2="600"/>
   </g>
   <g>
-    <rect class="cls-5" x="900" y="1500" width="200" height="100"/>
-    <text class="cls-3" transform="translate(931.53 1543.94)"><tspan x="0" y="0">Возвращение </tspan><tspan x="-25.25" y="28.8">зн</tspan><tspan class="cls-11" x="-2.93" y="28.8">а</tspan><tspan x="6.76" y="28.8">чения </tspan><tspan class="cls-8" x="72.21" y="28.8">ф</tspan><tspan x="87.16" y="28.8">ункции</tspan></text>
+    <rect class="cls-6" x="500" y="1800" width="200" height="100" rx="46.91" ry="46.91"/>
+    <text class="cls-4" transform="translate(552.64 1862.51)"><tspan class="cls-13" x="0" y="0">К</tspan><tspan x="22.22" y="0">онец</tspan></text>
   </g>
-  <line class="cls-5" x1="1000" y1="1200" x2="1000" y2="1300"/>
-  <line class="cls-5" x1="1000" y1="1400" x2="1000" y2="1500"/>
-  <polyline class="cls-5" points="800 1700 800 1650 1000 1650 1000 1600"/>
   <g>
-    <rect class="cls-5" x="700" y="1700" width="200" height="100" rx="46.91" ry="46.91"/>
-    <text class="cls-4" transform="translate(752.64 1762.51)"><tspan class="cls-13" x="0" y="0">К</tspan><tspan x="22.22" y="0">онец</tspan></text>
+    <polygon class="cls-6" points="900 730 900 800 700 800 700 730 730 700 870 700 900 730"/>
+    <text class="cls-3" transform="translate(743.77 743.94)"><tspan x="0" y="0">По</tspan><tspan class="cls-5" x="29.33" y="0">к</tspan><tspan x="40.63" y="0" xml:space="preserve">а *  ≥ 0</tspan><tspan x="22.56" y="28.8">цикл 1 </tspan></text>
   </g>
+  <g>
+    <path class="cls-6" d="m1030,700h-30v100h30"/>
+    <text class="cls-3" transform="translate(1010 758.34)"><tspan x="0" y="0">*equation.radicant(x_0)</tspan></text>
+  </g>
+  <g>
+    <line class="cls-6" x1="900" y1="750" x2="906" y2="750"/>
+    <line class="cls-7" x1="918.57" y1="750" x2="987.71" y2="750"/>
+    <line class="cls-6" x1="994" y1="750" x2="1000" y2="750"/>
+  </g>
+  <g>
+    <rect class="cls-6" x="700" y="850" width="200" height="100"/>
+    <text class="cls-3" transform="translate(732.46 908.34)"><tspan x="0" y="0">x_0 = x_0 + h</tspan></text>
+  </g>
+  <g>
+    <polygon class="cls-6" points="700 1070 700 1000 900 1000 900 1070 870 1100 730 1100 700 1070"/>
+    <text class="cls-3" transform="translate(766.34 1058.34)"><tspan x="0" y="0">цикл 1</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-6" x="700" y="1150" width="200" height="100"/>
+    <text class="cls-3" transform="translate(735.24 1208.34)"><tspan x="0" y="0">x_0 = x_0 - h</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-6" x="700" y="1300" width="200" height="100"/>
+    <text class="cls-3" transform="translate(744.82 1329.54)"><tspan x="0" y="0">Численн</tspan><tspan class="cls-1" x="87.41" y="0">о</tspan><tspan x="99.7" y="0">е </tspan><tspan x="-26.58" y="28.8">интегриро</tspan><tspan class="cls-10" x="78.93" y="28.8">в</tspan><tspan x="89.95" y="28.8">ание </tspan><tspan x="-36.45" y="57.6">при п</tspan><tspan class="cls-8" x="20.09" y="57.6">о</tspan><tspan x="31.63" y="57.6">мощи scipy</tspan></text>
+  </g>
+  <g>
+    <path class="cls-6" d="m1030,1300h-30v100h30"/>
+    <text class="cls-3" transform="translate(1010 1331.34)"><tspan x="0" y="0">подынтегральное выражение - equation.integrand</tspan><tspan x="0" y="27">от 0</tspan><tspan x="0" y="54">до x_0 </tspan></text>
+  </g>
+  <g>
+    <line class="cls-6" x1="900" y1="1350" x2="906" y2="1350"/>
+    <line class="cls-7" x1="918.57" y1="1350" x2="987.71" y2="1350"/>
+    <line class="cls-6" x1="994" y1="1350" x2="1000" y2="1350"/>
+  </g>
+  <g>
+    <rect class="cls-6" x="700" y="1450" width="200" height="100"/>
+    <text class="cls-3" transform="translate(736.67 1493.94)"><tspan x="0" y="0">Вычисление </tspan><tspan x="-30.39" y="28.8">зн</tspan><tspan class="cls-11" x="-8.07" y="28.8">а</tspan><tspan x="1.62" y="28.8">чения </tspan><tspan class="cls-9" x="67.07" y="28.8">ф</tspan><tspan x="82.03" y="28.8">ункции</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-6" x="700" y="1600" width="200" height="100"/>
+    <text class="cls-3" transform="translate(731.53 1643.94)"><tspan x="0" y="0">Возвращение </tspan><tspan x="-25.25" y="28.8">зн</tspan><tspan class="cls-11" x="-2.93" y="28.8">а</tspan><tspan x="6.76" y="28.8">чения </tspan><tspan class="cls-9" x="72.21" y="28.8">ф</tspan><tspan x="87.16" y="28.8">ункции</tspan></text>
+  </g>
+  <line class="cls-6" x1="600" y1="150" x2="600" y2="200"/>
+  <line class="cls-6" x1="600" y1="300" x2="600" y2="350"/>
+  <line class="cls-6" x1="800" y1="650" x2="800" y2="700"/>
+  <line class="cls-6" x1="800" y1="800" x2="800" y2="850"/>
+  <line class="cls-6" x1="800" y1="950" x2="800" y2="1000"/>
+  <line class="cls-6" x1="800" y1="1100" x2="800" y2="1150"/>
+  <line class="cls-6" x1="800" y1="1250" x2="800" y2="1300"/>
+  <line class="cls-6" x1="800" y1="1400" x2="800" y2="1450"/>
+  <line class="cls-6" x1="800" y1="1550" x2="800" y2="1600"/>
+  <polyline class="cls-6" points="800 1700 800 1750 600 1750 600 1800"/>
 </svg>

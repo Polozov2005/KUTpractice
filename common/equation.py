@@ -16,3 +16,12 @@ def integrand(x):
     result = np.sqrt(radicant(x))
 
     return result
+
+def resistance(rho, area, length):
+    rho = float(rho)
+    area = float(area)
+    length = float(length)
+
+    result = rho * area * length
+
+    return result
