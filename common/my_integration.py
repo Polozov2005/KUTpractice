@@ -1,14 +1,19 @@
 import numpy as np
 
-def alpha(f):
-    f = float(f)
-    p = np.pi
+import equation
 
-    integrand = lambda t: np.square(np.sin(2*p*f*t) + 0.1 * np.sin(6*p*f*t))
+def area():
+    h = 0.0001
+    x = 0
+    x_0 = x
 
-    integral = integrate(integrand, 0, 1/f)
+    while equation.radicant(x_0) >= 0:
+        x_0 += h
+    x_0 += -h
+    
+    integral = integrate(equation.integrand, 0, x_0)
 
-    result = np.power(f*integral, -0.5)
+    result = 4 * integral
 
     return result
 
